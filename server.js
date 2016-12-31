@@ -30,7 +30,10 @@ function start(route, handle) {
   	// response.end();
 	}
 
-	http.createServer(onRequest).listen(8888);
+	// var port_number = server.listen(process.env.PORT || 8888);
+
+	http.createServer(onRequest).listen(process.env.PORT || 8888); // http.createServer(onRequest).listen(8888);
+
 	console.log("Server has started.");
 }
 exports.start = start;
